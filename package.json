@@ -1,0 +1,40 @@
+{
+  "name": "@theodorejb/color-detect",
+  "version": "1.0.0",
+  "description": "Convert CSS color strings to RGBA and check whether they are light or dark",
+  "files": [
+    "src/*.js",
+    "src/*.d.ts"
+  ],
+  "main": "src/color-detect.js",
+  "types": "./src/color-detect.d.ts",
+  "scripts": {
+    "prepublishOnly": "tsc --module ES2015",
+    "test": "tsc && browserify test/tests.js -o test/browser/testbundle.js",
+    "start": "http-server"
+  },
+  "keywords": [
+    "color",
+    "detect",
+    "contrast",
+    "css",
+    "typescript"
+  ],
+  "author": {
+    "name": "Theodore Brown",
+    "url": "https://theodorejb.me/"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theodorejb/color-detect.git"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.48",
+    "@types/node": "^9.4.7",
+    "browserify": "^16.1.1",
+    "http-server": "^0.11.1",
+    "mocha": "^5.0.4",
+    "typescript": "^2.7.2"
+  }
+}
