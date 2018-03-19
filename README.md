@@ -1,5 +1,5 @@
 # color-detect
-[![NPM version](https://img.shields.io/npm/v/@theodorejb/color-detect.svg)](https://www.npmjs.org/package/@theodorejb/color-detect)
+[![npm version](https://badge.fury.io/js/%40theodorejb%2Fcolor-detect.svg)](https://badge.fury.io/js/%40theodorejb%2Fcolor-detect)
 
 Convert color strings to an RGBA array, and determine if the color is light or dark.
 
