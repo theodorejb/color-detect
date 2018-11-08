@@ -2,7 +2,7 @@
     "compilerOptions": {
         "module": "commonjs",
         "noImplicitAny": true,
-        "strictNullChecks": true,
+        "strict": true,
         "declaration": true,
         "lib": [
             "es2015",
