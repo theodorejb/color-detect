@@ -11,7 +11,7 @@
   "scripts": {
     "prepublishOnly": "tsc --module ES2015",
     "test": "tsc && browserify test/tests.js -o test/browser/testbundle.js",
-    "start": "http-server"
+    "start": "ws --port 8080"
   },
   "keywords": [
     "color",
@@ -30,12 +30,12 @@
     "url": "https://github.com/theodorejb/color-detect.git"
   },
   "devDependencies": {
-    "@types/mocha": "^5.2.7",
-    "@types/node": "^12.6.2",
-    "browserify": "^16.3.0",
-    "http-server": "^0.11.1",
-    "mocha": "^6.1.4",
-    "typescript": "^3.5.3"
+    "@types/mocha": "^8.0.2",
+    "@types/node": "^14.0.27",
+    "browserify": "^16.5.2",
+    "local-web-server": "^4.2.1",
+    "mocha": "^8.1.1",
+    "typescript": "^3.9.7"
   },
   "dependencies": {}
 }

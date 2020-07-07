@@ -8,8 +8,8 @@ with a reproducible example of the problem.
 ## Testing
 
 After cloning the repository, run `npm install && npm test && npm start`.
-Then open a browser to http://localhost:8080/test/browser/index.html to
+Then open a browser to http://localhost:8080/test/browser to
 execute the tests.
 
-After making code changes, run `npm run test` in a separate console
+After making code changes, run `npm test` in a separate console
 window before refreshing the browser to ensure all tests still pass.
