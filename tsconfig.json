@@ -1,7 +1,6 @@
 {
     "compilerOptions": {
         "module": "commonjs",
-        "noImplicitAny": true,
         "strict": true,
         "declaration": true,
         "lib": [

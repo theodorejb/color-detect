@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>color-detect tests</title>
@@ -8,10 +8,12 @@
 <body>
     <div id="mocha"></div>
     <script src="../../node_modules/mocha/mocha.js"></script>
-    <script>mocha.setup('bdd')</script>
+    <script>
+        mocha.setup('bdd');
+        mocha.checkLeaks();
+    </script>
     <script src="testbundle.js"></script>
     <script>
-        mocha.checkLeaks();
         mocha.run();
     </script>
 </body>
