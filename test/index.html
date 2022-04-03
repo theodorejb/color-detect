@@ -3,17 +3,18 @@
 <head>
     <meta charset="utf-8">
     <title>color-detect tests</title>
-    <link rel="stylesheet" href="../../node_modules/mocha/mocha.css" />
+    <link rel="stylesheet" href="../node_modules/mocha/mocha.css" />
 </head>
 <body>
     <div id="mocha"></div>
-    <script src="../../node_modules/mocha/mocha.js"></script>
+    <script src="../node_modules/chai/chai.js"></script>
+    <script src="../node_modules/mocha/mocha.js"></script>
     <script>
         mocha.setup('bdd');
         mocha.checkLeaks();
     </script>
-    <script src="testbundle.js"></script>
-    <script>
+    <script type="module" src="./tests.js"></script>
+    <script type="module">
         mocha.run();
     </script>
 </body>

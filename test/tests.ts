@@ -1,5 +1,5 @@
-import * as assert from 'assert';
-import {colorToRgbaArray, rgbaToCssString, isLightColor} from '../src/color-detect';
+import {colorToRgbaArray, rgbaToCssString, isLightColor} from '../src/color-detect.js';
+const assert = chai.assert;
 
 describe('colorToRgbaArray', function () {
     it('should be able to parse a named color', function () {
@@ -24,9 +24,9 @@ describe('colorToRgbaArray', function () {
 });
 
 describe('rgbaToCssString', function () {
-    it('should be able to output blue', function () {
-        let rgba = colorToRgbaArray('blue');
-        assert.strictEqual(rgbaToCssString(rgba), 'rgba(0, 0, 255, 1)');
+    it('should be able to output chocolate', function () {
+        let chocolateRgb = colorToRgbaArray('chocolate');
+        assert.strictEqual(rgbaToCssString(chocolateRgb), 'rgba(210, 105, 30, 1)');
     });
 });
 
