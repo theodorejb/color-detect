@@ -22,7 +22,7 @@ colorToRgbaArray('#123'); // [17, 34, 51, 255]
 colorToRgbaArray('rgb(80, 160, 240)'); // [80, 160, 240, 255]
 
 // detect whether a color is light or dark
-isLightColor(colorToRgbaArray('red')); // false
+isLightColor(colorToRgbaArray('red')); // true
 isLightColor(colorToRgbaArray('#663399')); // false
 isLightColor(colorToRgbaArray('yellow')); // true
 isLightColor(colorToRgbaArray('lime')); // true

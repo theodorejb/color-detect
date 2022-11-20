@@ -1,4 +1,4 @@
-import {colorToRgbaArray, rgbaToCssString, isLightColor} from '../src/color-detect.js';
+import {colorToRgbaArray, rgbaToCssString, isLightColor, colorLuminance} from '../src/color-detect.js';
 const assert = chai.assert;
 
 describe('colorToRgbaArray', function () {
@@ -30,19 +30,41 @@ describe('rgbaToCssString', function () {
     });
 });
 
-describe('isLightColor', function () {
-    it('should be able to detect whether a color is light or dark', function () {
-        let examples: [string, boolean][] = [
-            ['red', false],
-            ['#663399', false],
-            ['yellow', true],
-            ['lime', true],
-            ['green', false],
-        ];
+describe('colorLuminance', function () {
+    it('should return the luminance of orange', function () {
+        let yellowRgba = colorToRgbaArray('orange');
+        assert.strictEqual(colorLuminance(yellowRgba), 0.48170267036309633);
+    });
+});
 
-        examples.forEach(function (example) {
-            let rgba = colorToRgbaArray(example[0]);
-            assert.strictEqual(isLightColor(rgba), example[1]);
-        });
+describe('isLightColor', function () {
+    it('should detect red as light', function () {
+        let rgba = colorToRgbaArray('red');
+        assert.strictEqual(isLightColor(rgba), true);
+    });
+
+    it('should detect purple as dark', function () {
+        let rgba = colorToRgbaArray('#663399');
+        assert.strictEqual(isLightColor(rgba), false);
+    });
+
+    it('should detect yellow as light', function () {
+        let rgba = colorToRgbaArray('yellow');
+        assert.strictEqual(isLightColor(rgba), true);
+    });
+
+    it('should detect off-yellow as light', function () {
+        let rgba = colorToRgbaArray('#D6B508');
+        assert.strictEqual(isLightColor(rgba), true);
+    });
+
+    it('should detect lime as light', function () {
+        let rgba = colorToRgbaArray('lime');
+        assert.strictEqual(isLightColor(rgba), true);
+    });
+
+    it('should detect green as dark', function () {
+        let rgba = colorToRgbaArray('green');
+        assert.strictEqual(isLightColor(rgba), false);
     });
 });
