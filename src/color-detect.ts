@@ -32,7 +32,7 @@ var canvas: HTMLCanvasElement, context: CanvasRenderingContext2D | null;
  * Turns any valid canvas fillStyle into an array with values for R, G, B, and A.
  * Returns [0, 0, 0, 0] for invalid colors.
  */
-export function colorToRgbaArray(color: string): RgbaArray {
+export function colorToRgba(color: string): RgbaArray {
     // based on https://gist.github.com/njvack/02ad8efcb0d552b0230d
 
     if (!canvas) {

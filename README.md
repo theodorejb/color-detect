@@ -5,7 +5,7 @@ Convert color strings to an RGBA array, and determine if the color is light or d
 
 * Includes TypeScript definitions
 * No dependencies
-* ES6 module compatible with modern browsers and build tools
+* Native ES module compatible with modern browsers and build tools
 
 ## Installation
 
@@ -14,22 +14,22 @@ Convert color strings to an RGBA array, and determine if the color is light or d
 ## Usage
 
 ```javascript
-import {colorToRgbaArray, isLightColor, rgbaToCssString} from '@theodorejb/color-detect';
+import {colorToRgba, isLightColor, rgbaToCssString} from '@theodorejb/color-detect';
 
 // convert CSS colors to an RGBA array
-colorToRgbaArray('red'); // [255, 0, 0, 255]
-colorToRgbaArray('#123'); // [17, 34, 51, 255]
-colorToRgbaArray('rgb(80, 160, 240)'); // [80, 160, 240, 255]
+colorToRgba('red'); // [255, 0, 0, 255]
+colorToRgba('#123'); // [17, 34, 51, 255]
+colorToRgba('rgb(80, 160, 240)'); // [80, 160, 240, 255]
 
 // detect whether a color is light or dark
-isLightColor(colorToRgbaArray('red')); // true
-isLightColor(colorToRgbaArray('#663399')); // false
-isLightColor(colorToRgbaArray('yellow')); // true
-isLightColor(colorToRgbaArray('lime')); // true
-isLightColor(colorToRgbaArray('green')); // false
+isLightColor(colorToRgba('red')); // true
+isLightColor(colorToRgba('#663399')); // false
+isLightColor(colorToRgba('yellow')); // true
+isLightColor(colorToRgba('lime')); // true
+isLightColor(colorToRgba('green')); // false
 
 // convert an RGBA array to CSS color string
-let chocolateRgb = colorToRgbaArray('chocolate');
+let chocolateRgb = colorToRgba('chocolate');
 rgbaToCssString(chocolateRgb); // "rgba(210, 105, 30, 1)"
 ```
 
