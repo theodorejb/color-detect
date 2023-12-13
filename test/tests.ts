@@ -32,8 +32,10 @@ describe('rgbaToCssString', function () {
 
 describe('colorLuminance', function () {
     it('should return the luminance of orange', function () {
-        let yellowRgba = colorToRgba('orange');
-        assert.strictEqual(colorLuminance(yellowRgba), 0.48170267036309633);
+        const orangeRgba = colorToRgba('orange');
+        const luminance = colorLuminance(orangeRgba);
+        // avoid test error due to extra decimal in Firefox
+        assert.strictEqual(luminance.toFixed(16), "0.4817026703630963");
     });
 });
 
