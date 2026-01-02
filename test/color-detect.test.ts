@@ -1,5 +1,6 @@
 import {colorToRgba, rgbaToCssString, isLightColor, colorLuminance} from '../src/color-detect.js';
-const assert = chai.assert;
+
+import { describe, it, assert } from 'vitest';
 
 describe('colorToRgba', function () {
     it('should be able to parse a named color', function () {
