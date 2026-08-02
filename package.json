@@ -30,7 +30,7 @@
     "url": "https://github.com/theodorejb/color-detect.git"
   },
   "devDependencies": {
-    "@vitest/browser-preview": "^4.1.9",
-    "typescript": "^6.0.3"
+    "@vitest/browser-preview": "^4.1.11",
+    "typescript": "^7.0.2"
   }
 }
